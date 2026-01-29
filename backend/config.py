@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     DEBUG: bool = True
     
     # Database
-    DATABASE_URL: str = "postgresql+asyncpg://neondb_owner:npg_pI1MBcAJqjd2@ep-super-rain-ahqiluvi.c-3.us-east-1.aws.neon.tech/neondb?ssl=require"
+    DATABASE_URL: str = os.getenv("DATABASE_URL")
     
     # JWT
     SECRET_KEY: str = "dropskill-super-secret-key-change-in-production"
